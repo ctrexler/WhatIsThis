@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.WindowsAzure.MobileServices;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 
@@ -127,5 +128,10 @@ namespace WhatIsThis
             // TODO: Save application state and stop any background activity
             deferral.Complete();
         }
+
+        public static MobileServiceClient MobileService = new MobileServiceClient(
+            "https://whatthisthis.azure-mobile.net/",
+            "PVBxQarBSpaQhWfrLvTGlWrYkHFfpL18"
+        ); 
     }
 }
